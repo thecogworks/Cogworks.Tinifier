@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Version>1.0.0</Version>
+    <Authors>Cogworks</Authors>
+    <Company>Cogworks</Company>
+    <PackageIcon>cogworkstinifier.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <Description>It's a free Umbraco package that reduces the size of your JPEG and PNG images, supports Azure and speeds up page loading.</Description>
+    <Title>Cogworks.Tinifier</Title>
+    <PackageProjectUrl>https://github.com/thecogworks/Cogworks.Tinifier</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/thecogworks/Cogworks.Tinifier</RepositoryUrl>
+    <PackageId>Cogworks.Tinifier</PackageId>
+    <Product>Cogworks.Tinifier</Product>
+    <PackageTags>umbraco-marketplace plugin package image size JPEG PNG</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\cogworkstinifier.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.19.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.1.1" />
+    <PackageReference Include="NPoco" Version="5.7.1" />
+    <PackageReference Include="Umbraco.Cms.Core" Version="12.0.1" />
+    <PackageReference Include="Umbraco.Cms.Infrastructure" Version="12.0.1" />
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="12.0.1" />
+    <PackageReference Include="Umbraco.Cms.Web.Common" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<Content Include="App_Plugins\Cogworks.Tinifier\**" ExcludeFromSingleFile="true" CopyToPublishDirectory="Always" />
+	<None Include="buildTransitive\**" Pack="true" PackagePath="buildTransitive" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<None Remove="App_Plugins\Cogworks.Tinifier\media\fat.jpg" />
+	<None Remove="App_Plugins\Cogworks.Tinifier\media\photo.jpg" />
+	<None Remove="App_Plugins\Cogworks.Tinifier\media\runPanda.jpg" />
+	<None Remove="App_Plugins\Cogworks.Tinifier\media\sleeping_panda_by_citruspop-d2v8hdd.jpg" />
+	<None Remove="App_Plugins\Cogworks.Tinifier\media\spinner.gif" />
+	<None Remove="App_Plugins\Cogworks.Tinifier\media\support.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+</Project>

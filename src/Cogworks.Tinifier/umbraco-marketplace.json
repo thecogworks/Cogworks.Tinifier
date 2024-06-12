@@ -1,0 +1,48 @@
+{
+  "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+  "AuthorDetails": {
+    "Name": "Cogworks",
+    "Description": "A distinguished and longstanding Umbraco Partner",
+    "Url": "https://www.wearecogworks.com",
+    "ImageUrl": "https://lh3.googleusercontent.com/OkquQPZH-KsVORsQOFMT1zWSi8X-KMFWQ4FizRsG_BnbdBJZr-4FxIvKjTX7yrgNgLqdZjrqVosVtfQ6ZucMmVg=s0",
+    "Contributors": [],
+    "SyncContributorsFromRepository": false
+  },
+  "Category": "Tool Integration",
+  "Description": "A package that helps to reduce the size of your JPEG and PNG images.",
+  "DiscussionForumUrl": "https://github.com/thecogworks/Cogworks.Tinifier/pulls",
+  "DocumentationUrl": "https://github.com/thecogworks/Cogworks.Tinifier",
+  "IssueTrackerUrl": "https://github.com/thecogworks/Cogworks.Tinifier/issues",
+  "LicenseTypes": [ "Free" ],
+  "PackageType": "Package",
+  "PackagesByAuthor": [],
+  "RelatedPackages": [],
+  "Screenshots": [
+    {
+      "ImageUrl": "https://ibb.co/nCPFq9G",
+      "Caption": "Cogworks.Tinifier Dashboard"
+    },
+    {
+      "ImageUrl": "https://ibb.co/prRWD4H",
+      "Caption": "Cogworks.Tinifier in media section"
+    },
+    {
+      "ImageUrl": "https://ibb.co/G0P0QLr",
+      "Caption": "Cogworks.Tinifier logs"
+    }
+  ],
+  "Tags": [
+    "image",
+    "reduce",
+    "size",
+    "JPEG",
+    "PNG"
+  ],
+  "Title": "Cogworks.Tinifier",
+  "VersionSpecificPackageIds": [
+    {
+      "UmbracoMajorVersion": 12,
+      "PackageId": "Cogworks.Tinifier"
+    }
+  ]
+}

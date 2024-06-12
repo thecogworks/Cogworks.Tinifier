@@ -1,0 +1,21 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <CogworksTinifierContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\Cogworks.Tinifier\**\*.*</CogworksTinifierContentFilesPath>
+  </PropertyGroup>
+
+  <Target Name="CopyCogworksTinifierAssets" BeforeTargets="BeforeBuild">
+    <ItemGroup>
+      <CogworksTinifierContentFiles Include="$(CogworksTinifierContentFilesPath)" />
+    </ItemGroup>
+    <Message Text="Copying Cogworks.Tinifier files: $(CogworksTinifierContentFilesPath) - #@(CogworksTinifierContentFiles->Count()) files" Importance="high" />
+    <Copy SourceFiles="@(CogworksTinifierContentFiles)" DestinationFiles="@(CogworksTinifierContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\Cogworks.Tinifier\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="ClearCogworksTinifierAssets" BeforeTargets="Clean">
+    <ItemGroup>
+      <CogworksTinifierDir Include="$(MSBuildProjectDirectory)\App_Plugins\Cogworks.Tinifier\" />
+    </ItemGroup>
+    <Message Text="Clear old Cogworks.Tinifier data" Importance="high" />
+    <RemoveDir Directories="@(CogworksTinifierDir)" />
+  </Target>
+</Project>
