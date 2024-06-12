@@ -341,8 +341,8 @@ public class ImageService : IImageService
   protected void PreserveImageMetadata(byte[] originImage, ref byte[] optimizedImage)
   {
     #pragma warning disable CA1416
-    var originImg = (Image)new ImageConverter().ConvertFrom(originImage);
-    var optimisedImg = (Image)new ImageConverter().ConvertFrom(optimizedImage);
+    var originImg = (Image)new ImageConverter().ConvertFrom(originImage)!;
+    var optimisedImg = (Image)new ImageConverter().ConvertFrom(optimizedImage)!;
 
     if (!optimisedImg.HasValue() || !originImg.HasValue())
     {

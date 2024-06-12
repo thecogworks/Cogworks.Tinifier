@@ -169,7 +169,7 @@ public class TinifierController : UmbracoAuthorizedApiController
     var images = _imageService.GetFolderImages(folderId);
     var imagesList = _historyService.GetImagesWithoutHistory(images);
 
-    if (imagesList.HasAny())
+    if (!imagesList.HasAny())
     {
       return GetImageOptimizedReponse(true);
     }
