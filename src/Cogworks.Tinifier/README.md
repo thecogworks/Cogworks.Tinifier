@@ -17,7 +17,7 @@
 *   Optimized image stats
 *   Total savings widget
 *   API requests widget
-*   Umbraco 12.3.6+
+*   Umbraco 12.0.1+
 *   Save metadata
 *   Tinify everything (all media)
 *   Undo Tinify
@@ -25,9 +25,11 @@
 ### Backoffice Dashboard
 
 *   A dashboard has been added to the Settings section of the backoffice
-*   Currenlty only **Admins** can access it. (It can be updated)
+*   You need to add the Tinifier Section according the group member in the Umbraco Backoffice.
+![Tinifier-Section](App_Plugins\Cogworks.Tinifier\media\tinifier-section.jpg)
 *   This dashboard contains a button to manually trigger a **Full Tinify** (to optimize all the current media) or **Stop Tinify** (to reset Tinifier tables).
 *   There is also options to view and manage the current configuration for the package : API key, Optimize on upload, Enable undo optimization and Preserve image metadata.
+*   An image and folder could be tinified.
 
 # Installation
 
@@ -41,7 +43,7 @@ Or the NuGet Package Manager:
 Install-Package Cogworks.Tinifier
 ```
 
-You can set the settings in the backoffice, or add these settings to the **appsettings.json** to be the priority.
+You can set the settings in the backoffice, or add these settings to the **appsettings.json** (this will be always the priority).
 ```js
   "CogTinifierSettings": {
     "ApiKey": "xxx",
@@ -50,6 +52,16 @@ You can set the settings in the backoffice, or add these settings to the **appse
     "PreserveMetadata": true 
   }
 ```
+
+## Backoffice UI Test User:
+
+```sh
+Email: admin@admin.com
+Password: 0123456789
+```
+
+## Acknowledgements
+This package was inspired by the work of [Dmytro Obolonyk](https://github.com/dimonser147) in [UmbracoTinifier2](https://github.com/dimonser147/UmbracoTinifier2). Thank you for your valuable contributions!
 
 ### License
 
