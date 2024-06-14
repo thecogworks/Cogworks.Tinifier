@@ -26,7 +26,7 @@
 
 *   A dashboard has been added to the Settings section of the backoffice
 *   You need to add the Tinifier Section according the group member in the Umbraco Backoffice.
-![Tinifier-Section](App_Plugins\Cogworks.Tinifier\media\tinifier-section.jpg)
+![Tinifier-Section](App_Plugins/Cogworks.Tinifier/media/tinifier-section.jpg)
 *   This dashboard contains a button to manually trigger a **Full Tinify** (to optimize all the current media) or **Stop Tinify** (to reset Tinifier tables).
 *   There is also options to view and manage the current configuration for the package : API key, Optimize on upload, Enable undo optimization and Preserve image metadata.
 *   An image and folder could be tinified.
